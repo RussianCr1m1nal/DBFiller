@@ -7,5 +7,10 @@ public enum DataType {
     PHONE,
     DATE,
     ADDRESS,
-    MAIL
+    MAIL,
+    SALARY,
+    POST,
+    NUMBER,
+    TIME,
+    STATION
 }

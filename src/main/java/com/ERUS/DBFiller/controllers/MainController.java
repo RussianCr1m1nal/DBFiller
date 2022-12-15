@@ -13,10 +13,9 @@ public class MainController {
 
     @RequestMapping("/home")
     public String home(@RequestParam(name="home", required=false, defaultValue="home") String home,
-                           Model model){
+                       Model model){
         return "home";
     }
-
     @GetMapping("/generate")
     public String generate(@RequestParam(name="number", required=false, defaultValue="1") int number,
                            @RequestParam(name="language", required=false, defaultValue="SQL") String language,

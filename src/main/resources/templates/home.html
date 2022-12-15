@@ -7,7 +7,7 @@
 <body>
 <form name="form" th:action="@{/generate}" th:object="${QueryForm}" method="GET">
     <p><b>Количество строк:</b><br>
-    <input id="number" type="number" name="number">
+        <input id="number" type="number" name="number">
     <p><b>Язык запросов:</b><br>
         <input type="radio" name="language" value="SQL" > SQL<Br>
         <input type="radio" name="language" value="1С" > 1C<Br>
@@ -22,6 +22,11 @@
         <input type="button" name="address" value="Адрес" onclick="document.form.attrs.value+=this.name+' '"/>
         <input type="button" name="phone" value="Телефон" onclick="document.form.attrs.value+=this.name+' '"/>
         <input type="button" name="date" value="Дата" onclick="document.form.attrs.value+=this.name+' '"/>
+        <input type="button" name="salary" value="Зарплата" onclick="document.form.attrs.value+=this.name+' '"/>
+        <input type="button" name="post" value="Должность" onclick="document.form.attrs.value+=this.name+' '"/>
+        <input type="button" name="time" value="Время" onclick="document.form.attrs.value+=this.name+' '"/>
+        <input type="button" name="num" value="Порядковый номер" onclick="document.form.attrs.value+=this.name+' '"/>
+        <input type="button" name="station" value="Станция" onclick="document.form.attrs.value+=this.name+' '"/>
         <input type="text" name="attrs"  />
     </p>
     <input type="submit" value="Создать" />

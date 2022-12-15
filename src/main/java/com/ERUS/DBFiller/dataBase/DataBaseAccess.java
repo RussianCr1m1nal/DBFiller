@@ -18,7 +18,6 @@ public class DataBaseAccess{
         ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
         ds.setUrl("jdbc:mysql://127.0.0.1:3306/fillers");
         ds.setUsername("root");
-        ds.setPassword("");
         jdbcTemplate = new JdbcTemplate(ds);
     }
 
@@ -37,5 +36,9 @@ public class DataBaseAccess{
                         rs.getString("city"),
                         rs.getString("street")
                 ));
+    }
+
+    public List<String> getPosts() {
+        return jdbcTemplate.queryForList("select post from fillers",  String.class);
     }
 }
